@@ -1,0 +1,17 @@
+const { BlockFrostCardano } = require('../lib/index');
+
+const instance = new BlockFrostCardano({
+  mnemonic:
+    'behave laugh search gospel whisper dose acid wash accident husband rival dog post hover bulb',
+  language: 'english',
+  blockfrostProjectId: 'previewOWU32tDdWQbIS7HQNgMYsKGxzofAyyHV',
+  testnet: true,
+});
+
+instance
+  .submitTx(
+    '84a50081825820e4c03ad898239dbbcb772df41e260b87bc8598f2a7c18b96b15fe0254667331f000181825839003ccece7b3583e7f9b7e3b32c3f8caf25e988ed12a059152551876b71c928ef54ee4f595c00ff14b73405b5b10e7715862cff7c5db5d7ec7e1b0000000253e584e1021a00029ee5031a003811ed05a1581de0c928ef54ee4f595c00ff14b73405b5b10e7715862cff7c5db5d7ec7e1a000f4240a100828258208fc863ceccdb6f7684b58d740ff0e59092aebd938dee3273ec81dd1bdaef8cae584053d44b8cf3c3672b3b18aaec2df7c68267919bb3a3d48023480c5aad5e06aa7a8f78ddef168d918f3f281b0942991ee564aabb8804863da00ce3c13ff0d8b308825820f75cdd68b3aff12c46162df4e7c18c236278e8deef01566c7999d1ffa4b43a9a584088afbf9e910da058c34045ef3db5ee44b0de14f175b0e7d214fa80f5248692d8aff200e9a089270bb8c101f8ace6f510f629ff374792c56ae3170fb6f6a8900ff5f6',
+  )
+  .then(console.log);
+
+// e4c03ad898239dbbcb772df41e260b87bc8598f2a7c18b96b15fe0254667331f
